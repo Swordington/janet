@@ -1,0 +1,26 @@
+{
+  "name": "janet",
+  "version": "1.0.0-dev",
+  "description": "The Janet Discord bot",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swordington/janet.git"
+  },
+  "author": "Swordington",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Swordington/janet/issues"
+  },
+  "homepage": "https://github.com/Swordington/janet#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "last-commit-log": "^3.1.2",
+    "mongoose": "^6.3.0",
+    "signale": "^1.4.0"
+  }
+}
