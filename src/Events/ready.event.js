@@ -16,13 +16,13 @@ exports.event = async client => {
 
   switch (process.env.MODE) {
     case 'DEV':
-      client.user.setActivity(`Joe Cap Dev | v.${client.gConfig.commit.shortHash}`, { type: 'PLAYING' })
+      client.user.setActivity(`Janet Dev | v.${client.gConfig.commit.shortHash}`, { type: 'PLAYING' })
       break
     case 'STAGING':
-      client.user.setActivity(`Capollo Media | ${client.gConfig.commit.shortHash}`, { type: 'WATCHING' })
+      client.user.setActivity(`Janet | ${client.gConfig.commit.shortHash}`, { type: 'WATCHING' })
       break
     case 'PROD':
-      client.user.setActivity('Capollo Media', { type: 'WATCHING' })
+      client.user.setActivity('Janet', { type: 'WATCHING' })
       break
     default:
       throw new Error('I don\'t how we got here, but something is very very wrong.')
@@ -39,11 +39,11 @@ exports.event = async client => {
       client.logger.load('Started refreshing application (/) commands.')
 
       client.guilds.cache.forEach(async g => {
-        g.jcs = await fetchGuild(g.id)
+        g.jsettings = await fetchGuild(g.id)
         const commandData = []
 
         client.commands.forEach(c => {
-          if (c.config.restricted === true && g.jcs.guildType === 0) return
+          if (c.config.restricted === true && g.jsettings.guildType === 0) return
           commandData.push(c.cmdData.toJSON())
         })
         try {
