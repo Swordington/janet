@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/Swordington/janet#readme",
   "dependencies": {
+    "@discordjs/rest": "^0.4.1",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "last-commit-log": "^3.1.2",
+    "lodash": "^4.17.21",
     "mongoose": "^6.3.0",
     "signale": "^1.4.0"
   }

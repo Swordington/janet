@@ -1,6 +1,5 @@
 const { Client } = require('discord.js') // eslint-disable-line no-unused-vars
 const { fetchGuild } = require('../Controllers/guild.ctl')
-const { refreshCache } = require('../Controllers/uuidCache.ctl')
 
 exports.config = {
   event: 'ready'
@@ -63,5 +62,4 @@ exports.event = async client => {
       console.error(error)
     }
   })()
-  await refreshCache(client)
 }
